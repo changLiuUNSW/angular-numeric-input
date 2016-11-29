@@ -1,7 +1,7 @@
 [![Bower Version](https://img.shields.io/bower/v/angular-numeric-input.svg?style=flat)](https://github.com/changLiuUNSW/angular-numeric-input/releases) [![NPM Version](http://img.shields.io/npm/v/angular-numeric-input.svg?style=flat)](https://www.npmjs.org/package/angular-numeric-input) [![Build Status](https://travis-ci.org/changLiuUNSW/angular-numeric-input.svg?branch=master)](https://travis-ci.org/changLiuUNSW/angular-numeric-input)
 
 # Angular-numeric-input
-An Angular directive for number input to provide real-time number input formatting and validations.
+An Angular directive for number input to provide **real-time** number input formatting and validations.
 
 It does a few things:
 
@@ -12,12 +12,29 @@ It does a few things:
 
 **Note** Not suport negative number.
 
-## Usage:
+## Latest Changes
 
+- Check [CHANGELOG.md](/CHANGELOG.md)
+
+## Demo
+
+[See directive in action] (https://cdn.rawgit.com/changLiuUNSW/angular-numeric-input/master/docs/index.html)
+
+## Angular Requirements
+Require Angular 1.3.0 or higher and it has been tested with Angular 1.5.8.
+
+## Installation Methods
+
+### npm
 ```
-bower install angular-numeric-input
+$ npm install angular-numeric-input
+```
+### bower
+```
+$ bower install angular-numeric-input
 ```
 
+## Usage
 
 Load the unminified or minified file from `dist` dir:
 
@@ -30,7 +47,6 @@ Then include it as a dependency in your app.
 ```
 angular.module('myApp', ['ui.numericInput'])
 ```
-
 
 ### Attributes:
 
@@ -46,16 +62,29 @@ angular.module('myApp', ['ui.numericInput'])
 Basic example:
 
 ``` html
-<input type="tel" ng-model="model" data-numeric-input>
+<input type="tel" ng-model="model" numeric-input>
 ```
 
 `min`, `max` can be set dynamically:
 
 ``` html
- <input type="tel" data-numeric-input data-ng-model="model" data-max-length="10" data-min="{{min}}" data-max="{{max}}"/>
+<input type="tel" numeric-input ng-model="model" data-min="{{min}}" data-max="{{max}}"/>
 ```
 
-## Tests:
+## Development
 
-1. Install test deps: `npm install`
-1. Run: `gulp test`
+### Prepare your environment
+* Install [Node.js](http://nodejs.org/) and NPM (should come with)
+* Install global dev dependencies: `npm install -g gulp`
+* Install local dev dependencies: `npm install` in repository directory
+
+### Development Commands
+
+* `gulp` to build and test
+* `gulp build` to build
+* `gulp test` for one-time test with karma
+
+## Contributing
+
+- Run the tests
+- Try the [examples](./docs/index.html)

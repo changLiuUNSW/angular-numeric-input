@@ -60,3 +60,5 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', ['clean', 'dist']);
+
+gulp.task('default', ['test', 'build']);
