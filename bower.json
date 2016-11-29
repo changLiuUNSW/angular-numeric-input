@@ -1,0 +1,33 @@
+{
+    "name": "angular-numeric-input",
+    "homepage": "https://github.com/changLiuUNSW/angular-numeric-input",
+    "author": "Chang Liu <3dslayer@gmail.com>",
+    "description": "AngularJS directive to provide real-time number formatting and validations",
+    "version": "1.0.0",
+    "main": [
+        "dist/angular-numeric-input.js"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "angular directive",
+        "angular",
+        "currency",
+        "input",
+        "number",
+        "real time",
+        "format"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "src",
+        "test",
+        "gulpfile.js",
+        "karma.conf.js",
+        "examples"
+    ],
+    "dependencies": {
+        "angular": ">=1.3.0"
+    }
+}

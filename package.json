@@ -1,0 +1,48 @@
+{
+    "name": "angular-numeric-input",
+    "version": "1.0.0",
+    "description": "AngularJS directive to provide real-time number formatting and validations",
+    "main": "./index.js",
+    "scripts": {
+        "test": "gulp test"
+    },
+    "keywords": [
+        "angular directive",
+        "angular",
+        "currency",
+        "input",
+        "number",
+        "real time",
+        "format"
+    ],
+    "author": "Chang Liu <3dslayer@gmail.com>",
+    "homepage": "https://github.com/changLiuUNSW/angular-numeric-input",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:changLiuUNSW/angular-numeric-input.git"
+    },
+    "bugs": {
+        "mail": "3dslayer@gmail.com",
+        "url": "https://github.com/changLiuUNSW/angular-numeric-input/issues"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "angular": "^1.2.29",
+        "angular-mocks": "^1.2.29",
+        "del": "^2.0.2",
+        "gulp": "^3.9.0",
+        "gulp-ng-annotate": "^1.1.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sourcemaps": "^1.6.0",
+        "gulp-uglify": "^1.4.1",
+        "jasmine-core": "^2.5.2",
+        "jquery": "^2.1.4",
+        "karma": "^1.1.0",
+        "karma-chrome-launcher": "^1.0.1",
+        "karma-jasmine": "^1.0.2",
+        "karma-mocha-reporter": "^2.0.4",
+        "karma-phantomjs-launcher": "^1.0.1",
+        "lodash": "^3.10.1",
+        "phantomjs": "^1.9.18"
+    }
+}

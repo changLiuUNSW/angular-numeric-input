@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html data-ng-app="demo">
+
+<head>
+    <title>Angular Numeric Input Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- ui-select files -->
+    <script src="../dist/angular-numeric-input.js"></script>
+    <script src="./assets/demo.js"></script>
+
+    <link href="./assets/docs.css" rel="stylesheet" />
+</head>
+
+<body ng-controller="DemoCtrl as vm">
+
+    <form name="vm.demoFrom" class="demo-form form-validation">
+        <h3>min and max</h3>
+        <p>min: {{vm.min}} max: {{vm.max}}</p>
+        <p>input: {{vm.minMaxInput}}</p>
+        <div class="form-group">
+            <label for="minMaxInput" class="sr-only">Number:</label>
+            <input type="tel" ui-numeric-input name="minMaxInput" id="minMaxInput" class="form-control" ng-model="vm.minMaxInput" min="{{vm.min}}" max="{{vm.max}}" />
+            <div ng-messages="vm.demoFrom.minMaxInput.$error" class="error" role="alert" data-ng-show="!vm.demoFrom.minMaxInput.$pristine">
+                <div ng-message="min">min error</div>
+                <div ng-message="max">max error</div>
+                <div ng-message="numeric">invalid format</div>
+            </div>
+        </div>
+
+        <h3>minNotEqual and maxNotEqual</h3>
+        <p>min: {{vm.min}} max: {{vm.max}}</p>
+        <p>minNotEqual: true</p>
+        <p>maxNotEqual: true</p>
+        <p>input: {{vm.minMaxNotEqualInput}}</p>
+        <div class="form-group">
+            <label for="minMaxNotEqualInput" class="sr-only">Number:</label>
+            <input type="tel" ui-numeric-input name="minMaxNotEqualInput" id="minMaxNotEqualInput" class="form-control" ng-model="vm.minMaxNotEqualInput" max-not-equal="true" min-not-equal="true" min="{{vm.min}}" max="{{vm.max}}" />
+            <div ng-messages="vm.demoFrom.minMaxNotEqualInput.$error" class="error" role="alert" data-ng-show="!vm.demoFrom.minMaxNotEqualInput.$pristine">
+                <div ng-message="min">min error</div>
+                <div ng-message="max">max error</div>
+                <div ng-message="numeric">invalid format</div>
+            </div>
+        </div>
+
+        <h3>max length</h3>
+        <p>max length: 10</p>
+        <p>input: {{vm.maxLengthInput}}</p>
+        <div class="form-group">
+            <label for="maxLengthInput" class="sr-only">Number:</label>
+            <input type="tel" ui-numeric-input name="maxLengthInput" id="maxLengthInput" class="form-control" ng-model="vm.maxLengthInput" max-length="10" />
+            <div ng-messages="vm.demoFrom.maxLengthInput.$error" class="error" role="alert" data-ng-show="!vm.demoFrom.maxLengthInput.$pristine">
+                <div ng-message="min">min error</div>
+                <div ng-message="max">max error</div>
+                <div ng-message="numeric">invalid format</div>
+            </div>
+        </div>
+
+        <h3>allowDecimal</h3>
+        <p>allowDecimal: true</p>
+        <p>input: {{vm.decimalInput}}</p>
+        <div class="form-group">
+            <label for="decimalInput" class="sr-only">Number:</label>
+            <input type="tel" ui-numeric-input name="decimalInput" id="decimalInput" class="form-control" ng-model="vm.decimalInput" allow-decimal="true" />
+            <div ng-messages="vm.demoFrom.decimalInput.$error" class="error" role="alert" data-ng-show="!vm.demoFrom.decimalInput.$pristine">
+                <div ng-message="min">min error</div>
+                <div ng-message="max">max error</div>
+                <div ng-message="numeric">invalid format</div>
+            </div>
+        </div>
+
+        <h3>all features</h3>
+        <p>min: {{vm.min}} max:{{vm.max}}</p>
+        <p>max length: 10</p>
+        <p>minNotEqual: true</p>
+        <p>maxNotEqual: true</p>
+        <p>allowDecimal: true</p>
+        <p>input: {{vm.allInput}}</p>
+        <div class="form-group">
+            <label for="allInput" class="sr-only">Number:</label>
+            <input type="tel" ui-numeric-input name="allInput" id="allInput" class="form-control" ng-model="vm.allInput" allow-decimal="true" min="{{vm.min}}" max="{{vm.max}}" max-not-equal="true" min-not-equal="true" max-length="10" />
+            <div ng-messages="vm.demoFrom.allInput.$error" class="error" role="alert" data-ng-show="!vm.demoFrom.allInput.$pristine">
+                <div ng-message="min">min error</div>
+                <div ng-message="max">max error</div>
+                <div ng-message="numeric">invalid format</div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

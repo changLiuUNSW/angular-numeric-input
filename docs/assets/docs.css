@@ -1,0 +1,19 @@
+.demo-form {
+    padding: 10px;
+    width: 60%;
+}
+
+.form-validation .form-control.ng-dirty.ng-invalid {
+    border-color: #f05050
+}
+
+.form-validation .form-control.ng-dirty.ng-valid,
+.form-validation .form-control.ng-dirty.ng-valid:focus {
+    border-color: #27c24c
+}
+
+.form-validation .error {
+    color: #f05050;
+    position: absolute;
+    font-size: 12px
+}
