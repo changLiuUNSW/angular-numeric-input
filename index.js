@@ -1,2 +1,2 @@
-require('./dist/select.js');
-module.exports = 'ui.select';
+require('./dist/angular-numeric-input.js');
+module.exports = 'ui.numericInput';

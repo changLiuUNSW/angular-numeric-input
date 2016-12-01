@@ -1,6 +1,6 @@
 {
     "name": "angular-numeric-input",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "AngularJS directive to provide real-time number formatting and validations",
     "main": "./index.js",
     "scripts": {
