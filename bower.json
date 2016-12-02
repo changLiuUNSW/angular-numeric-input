@@ -3,7 +3,7 @@
     "homepage": "https://github.com/changLiuUNSW/angular-numeric-input",
     "author": "Chang Liu <3dslayer@gmail.com>",
     "description": "AngularJS directive to provide real-time number formatting and validations",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": [
         "dist/angular-numeric-input.js"
     ],

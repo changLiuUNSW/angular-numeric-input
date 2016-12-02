@@ -62,13 +62,13 @@ angular.module('myApp', ['ui.numericInput'])
 Basic example:
 
 ``` html
-<input type="tel" ng-model="model" numeric-input>
+<input type="tel" ng-model="model" ui-numeric-input>
 ```
 
 `min`, `max` can be set dynamically:
 
 ``` html
-<input type="tel" numeric-input ng-model="model" data-min="{{min}}" data-max="{{max}}"/>
+<input type="tel" ui-numeric-input ng-model="model" data-min="{{min}}" data-max="{{max}}"/>
 ```
 
 ## Development

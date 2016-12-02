@@ -64,7 +64,7 @@
         <p>input: {{vm.decimalInput}}</p>
         <div class="form-group">
             <label for="decimalInput" class="sr-only">Number:</label>
-            <input type="tel" ui-numeric-input name="decimalInput" id="decimalInput" class="form-control" ng-model="vm.decimalInput" allow-decimal="true" />
+            <input type="text" ui-numeric-input name="decimalInput" id="decimalInput" class="form-control" ng-model="vm.decimalInput" allow-decimal="true" />
             <div ng-messages="vm.demoFrom.decimalInput.$error" class="error" role="alert" data-ng-show="!vm.demoFrom.decimalInput.$pristine">
                 <div ng-message="min">min error</div>
                 <div ng-message="max">max error</div>
@@ -81,7 +81,7 @@
         <p>input: {{vm.allInput}}</p>
         <div class="form-group">
             <label for="allInput" class="sr-only">Number:</label>
-            <input type="tel" ui-numeric-input name="allInput" id="allInput" class="form-control" ng-model="vm.allInput" allow-decimal="true" min="{{vm.min}}" max="{{vm.max}}" max-not-equal="true" min-not-equal="true" max-length="10" />
+            <input type="text" ui-numeric-input name="allInput" id="allInput" class="form-control" ng-model="vm.allInput" allow-decimal="true" min="{{vm.min}}" max="{{vm.max}}" max-not-equal="true" min-not-equal="true" max-length="10" />
             <div ng-messages="vm.demoFrom.allInput.$error" class="error" role="alert" data-ng-show="!vm.demoFrom.allInput.$pristine">
                 <div ng-message="min">min error</div>
                 <div ng-message="max">max error</div>
