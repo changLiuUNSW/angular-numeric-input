@@ -1,3 +1,10 @@
+<a name="1.0.4"></a>
+## [v1.0.4](https://github.com/changLiuUNSW/angular-numeric-input/compare/1.0.3...1.0.4) (2017-05-28)
+
+### Fixed
+
+- fix can not receive zero as decimal when allowDecimal is true closes [#3](https://github.com/changLiuUNSW/angular-numeric-input/issues/3)
+
 <a name="1.0.3"></a>
 ## [v1.0.3](https://github.com/changLiuUNSW/angular-numeric-input/compare/1.0.2...1.0.3) (2016-12-2)
 

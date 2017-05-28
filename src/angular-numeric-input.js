@@ -12,6 +12,7 @@
                         max,
                         lastValidValue,
                         dotSuffix,
+                        firstDecimalZero,
                         positiveInteger = true,
                         minNotEqual,
                         maxNotEqual,
@@ -122,6 +123,8 @@
                             value = '0' + value;
                         }
 
+                        firstDecimalZero = /\d*\.0$/.test(value);
+
                         var empty = ngModelCtrl.$isEmpty(value);
                         if (empty || (NUMBER_REGEXP.test(value) && numberLength(value) <= maxLength)) {
                             lastValidValue = (value === '') ? null : (empty ? value : round(value));
@@ -165,6 +168,9 @@
                         var viewValue = formatToNumber(value);
                         if (!positiveInteger && dotSuffix) {
                             viewValue += '.';
+                        }
+                        if (!positiveInteger && firstDecimalZero) {
+                            viewValue += '.0';
                         }
                         //This logic is used to preserve cursor position after formatting
                         var start = el[0].selectionStart,

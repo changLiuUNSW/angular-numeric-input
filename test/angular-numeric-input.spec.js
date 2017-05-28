@@ -174,6 +174,17 @@ describe('numericInput: test spec', function() {
         expect(inputElement.val()).toEqual('1,234.5');
     });
 
+    it('test for allow decimal config: input 1234.05 should be auto-formatting to 1,234.05', function() {
+        initAllowDecimal();
+
+        inputElement.val('1234.05');
+        inputElement.triggerHandler('input');
+
+        var ngModel = inputElement.controller('ngModel');
+        expect(ngModel.$viewValue).toEqual('1,234.05');
+        expect(inputElement.val()).toEqual('1,234.05');
+    });
+
     it('test for allow decimal config: input 1234.567 should be auto-formatting to 1,234.57', function() {
         initAllowDecimal();
 
