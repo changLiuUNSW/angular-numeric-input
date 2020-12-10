@@ -1,4 +1,12 @@
 <a name="1.0.4"></a>
+## [v1.0.4](https://github.com/changLiuUNSW/angular-numeric-input/compare/1.0.3...1.0.4) (2020-12-10)
+
+### Added
+
+- can setting decimal precision (html tag attr: decimal-precision)
+- modify regexp controller decimal precision number to limited (to limit the decimal-precision number)
+
+<a name="1.0.4"></a>
 ## [v1.0.4](https://github.com/changLiuUNSW/angular-numeric-input/compare/1.0.3...1.0.4) (2017-05-28)
 
 ### Fixed
