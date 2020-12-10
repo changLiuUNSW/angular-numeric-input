@@ -25,8 +25,18 @@
 
                     if (attrs.allowDecimal) {
                         positiveInteger = false;
-                        precision = 2;
+                        /*
+                          2020-12-10 Rong add can setting decimal precision
+                          and
+                          modify regexp controller decimal limit
+                        */
+                        if(attrs.decimalPrecision){
+                          precision = attrs.decimalPrecision;
+                        }else{
+                          precision = 2;
+                        }
                         min = 0;
+                        NUMBER_REGEXP = new RegExp("^\\s*[-+]?(\\d+|\\d*\\.\\d{0," + precision + "})\\s*$")
                     }
 
                     if (attrs.minNotEqual) {
@@ -105,6 +115,7 @@
                         return value;
                     }
 
+                    var copyValue
                     ngModelCtrl.$parsers.push(function(input) {
                         //check undefined and NaN
                         //http://adripofjavascript.com/blog/drips/the-problem-with-testing-for-nan-in-javascript.html
